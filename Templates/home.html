@@ -1,0 +1,8 @@
+<div ng-controller="homeController">
+    <div>
+        <input type='text' ng-model='searchText' placeholder="Search a name" />
+        <ul id="fixed" when-scrolled="loadMore()">
+          <li ng-repeat="i in showItems | filter:searchText track by $index">{{i.firstname}} {{i.lastname}} {{$index}}</li>
+        </ul>  
+      </div>
+</div>
